@@ -2,7 +2,7 @@ FROM nginx:alpine
 
 COPY . /var/www-seed/
 COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh && rm /var/www-seed/entrypoint.sh
+RUN chmod +x /entrypoint.sh && rm /var/www-seed/entrypoint.sh /var/www-seed/.dockerignore
 
 EXPOSE 80
 ENTRYPOINT ["/entrypoint.sh"]
