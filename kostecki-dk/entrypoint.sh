@@ -1,3 +1,3 @@
 #!/bin/sh
-cp -rn /var/www-seed/. /usr/share/nginx/html/
+cp -rvn /var/www-seed/. /usr/share/nginx/html/ || echo "ERROR: cp failed"
 exec "$@"
