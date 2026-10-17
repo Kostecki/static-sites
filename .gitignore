@@ -1,1 +1,6 @@
 .DS_Store
+
+# Docker Compose: env file and local data folders
+.env
+/israndom-win/www/
+/kostecki-dk/www/

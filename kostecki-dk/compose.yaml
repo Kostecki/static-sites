@@ -1,0 +1,10 @@
+services:
+  web:
+    restart: unless-stopped
+    image: ghcr.io/kostecki/kostecki-dk:latest
+    container_name: kostecki-dk
+    ports:
+      - "${APP_PORT:-3000}:80"
+    volumes:
+      - ${DATA_DIR:-.}/www:/usr/share/nginx/html
+    hostname: ${APP_HOSTNAME:-kostecki-dk}
