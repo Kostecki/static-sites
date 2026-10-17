@@ -1,0 +1,10 @@
+services:
+  web:
+    restart: unless-stopped
+    image: ghcr.io/kostecki/israndom-win:latest
+    container_name: israndom-win
+    ports:
+      - "9002:80"
+    volumes:
+      - ${DATA_DIR:-.}/www:/usr/share/nginx/html
+    hostname: israndom-win-docker-tower
