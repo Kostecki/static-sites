@@ -4,7 +4,7 @@ services:
     image: ghcr.io/kostecki/israndom-win:latest
     container_name: israndom-win
     ports:
-      - "9002:80"
+      - "${APP_PORT:-3000}:80"
     volumes:
       - ${DATA_DIR:-.}/www:/usr/share/nginx/html
-    hostname: israndom-win-docker-tower
+    hostname: ${APP_HOSTNAME:-israndom-win}

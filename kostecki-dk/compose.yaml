@@ -4,7 +4,7 @@ services:
     image: ghcr.io/kostecki/kostecki-dk:latest
     container_name: kostecki-dk
     ports:
-      - "9001:80"
+      - "${APP_PORT:-3000}:80"
     volumes:
       - ${DATA_DIR:-.}/www:/usr/share/nginx/html
-    hostname: kostecki-dk-docker-tower
+    hostname: ${APP_HOSTNAME:-kostecki-dk}
