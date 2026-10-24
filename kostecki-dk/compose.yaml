@@ -7,4 +7,4 @@ services:
       - "${APP_PORT:-3000}:80"
     volumes:
       - ${DATA_DIR:-.}/www:/usr/share/nginx/html
-    hostname: ${APP_HOSTNAME:-kostecki-dk}
+    hostname: kostecki-dk
